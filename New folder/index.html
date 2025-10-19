@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Journey Sliders - Test</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+  <!-- Montserrat font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --museum-beige: #f6efe6;
+      --museum-cream: #fff7ec;
+      --museum-orange: #c46b1a;
+      --white: #ffffff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Montserrat",sans-serif;
+      background: linear-gradient(180deg,var(--museum-beige), #f3e8dd);
+      color:#222;
+      padding:3rem 1.5rem 6rem;
+    }
+    .container{max-width:1240px;margin:0 auto}
+
+    h1.section-heading{
+      text-align:center;
+      color:var(--museum-orange);
+      font-size:2.6rem;
+      letter-spacing:1px;
+      margin-bottom:2.4rem;
+      text-transform: none;
+    }
+
+    /* ----- Common slider styles ----- */
+    .museum-slider {
+      width:100%;
+      position:relative;
+      margin:0 auto;
+    }
+
+    .museum-slide img{
+      width:100%;
+      height:40rem;
+      object-fit:cover;
+      border-radius:1.4rem;
+      box-shadow: 0 10px 30px rgba(18,28,53,0.12);
+      display:block;
+    }
+
+    /* controls */
+    .museum-slider-control{
+      display:flex;
+      justify-content:center;
+      gap:1.2rem;
+      align-items:center;
+      margin-top:1.6rem;
+    }
+    .slider-arrow{
+      width:3.8rem;height:3.8rem;border-radius:50%;
+      background:var(--white);display:flex;align-items:center;justify-content:center;
+      box-shadow:0 6px 18px rgba(18,28,53,0.09);cursor:pointer;transition:all .18s;
+    }
+    .slider-arrow:hover{transform:translateY(-3px);background:#f8e0c9}
+    .slider-arrow ion-icon{font-size:1.8rem;color:var(--museum-orange)}
+
+    .swiper-pagination-bullet{background:var(--museum-orange);opacity:.45}
+    .swiper-pagination-bullet-active{opacity:1}
+
+    /* ----- Horizontal specific ----- */
+    #journey-horizontal .museum-slide img{height:44rem}
+    @media (max-width:900px){ #journey-horizontal .museum-slide img{height:36rem} }
+
+    /* ----- Vertical specific ----- */
+    #journey-vertical{
+      margin-top:4.2rem;
+      background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+      padding:2.4rem;
+      border-radius:1rem;
+    }
+    #journey-vertical .museum-slide img{height:28rem;border-radius:1rem}
+    @media (min-width:780px){
+      /* place vertical slider center and narrower on wide screens */
+      #journey-vertical .museum-slider{max-width:420px;margin:0 auto}
+    }
+
+    /* small helper for demo label */
+    .demo-label{opacity:.85;text-align:center;margin-bottom:.6rem;font-weight:600;color:#7a5a3a}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="section-heading">Journey Through Egypt’s Wonders</h1>
+  </div>
+
+  <!-- ===== Horizontal Slider (coverflow style) ===== -->
+  <section id="journey-horizontal" class="container" aria-label="Horizontal gallery">
+    <div class="museum-slider swiper horizontal-swiper">
+      <div class="swiper-wrapper">
+        <!-- replace image URLs with your images (same aspect ratio recommended) -->
+        <div class="swiper-slide museum-slide"><img src="https://picsum.photos/1000/1400?random=11" alt="Artifact 1"></div>
+        <div class="swiper-slide museum-slide"><img src="https://picsum.photos/1000/1400?random=12" alt="Artifact 2"></div>
+        <div class="swiper-slide museum-slide"><img src="https://picsum.photos/1000/1400?random=13" alt="Artifact 3"></div>
+        <div class="swiper-slide museum-slide"><img src="https://picsum.photos/1000/1400?random=14" alt="Ar

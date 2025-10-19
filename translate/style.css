@@ -1,0 +1,173 @@
+:root {
+  --gold: #E36E21;
+  --orange: #f29b30;
+  --brown: #6B3E2F;
+  --white: #DCC7A1;
+  --bg: #6B3E2F; 
+}
+
+body {
+  background: url('istock-168531310_orig.jpeg') center/cover no-repeat fixed, var(--bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Section container */
+.section {
+  width: 100%;
+  max-width: 900px;
+  background: rgba(55, 38, 19, 0.926);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: linear-gradient(227, 110, 33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(227, 110, 33);
+}
+
+h2 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--gold);
+}
+
+.lead {
+  color: rgba(255, 255, 255, 0.85);
+  margin: 4px 0 16px 0;
+}
+
+/* Input controls */
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: 16px;
+}
+
+button {
+  background: linear-gradient(90deg, var(--gold), var(--orange));
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--brown);
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--white);
+}
+
+/* Result cards */
+.preview-wrap {
+  margin-top: 24px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cartouche {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 14px;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+
+.hieroglyphs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.glyph {
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--white), #f0e6c0);
+  color: var(--brown);
+  font-size: 26px;
+  box-shadow: inset 0 -6px 10px rgba(0, 0, 0, 0.06), 0 4px 10px rgba(2, 6, 23, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI Symbol', 'Noto Sans Egyptian Hieroglyphs', 'Segoe UI Emoji', serif;
+}
+
+.cartouche-frame {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 50px;
+  background: rgba(107, 62, 47, 0.1);
+  display: none;
+}
+
+.notes {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.plain {
+  font-size: 18px;
+  color: var(--gold);
+  margin: 12px 0;
+}
+
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hieroglyph Name Converter — Egyptian Museum</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="section" aria-label="Hieroglyph Converter">
+    <div class="header">
+      <div class="logo">EG</div>
+      <div>
+        <h2>Hieroglyph Name Converter</h2>
+        <p class="lead">Type your name in English and see it displayed in beautiful Ancient Egyptian hieroglyphs.</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input id="nameInput" type="text" placeholder="Enter your name (e.g. Nouran)">
+      <button id="convertBtn">Convert</button>
+      <button id="clearBtn" class="secondary">Clear</button>
+    </div>
+
+    <div class="preview-wrap">
+      <div class="cartouche" id="display">
+        <div class="title">Hieroglyphic Result</div>
+        <div class="hieroglyphs" id="glyphContainer"></div>
+        <div class="cartouche-frame" id="cartoucheFrame" style="display:none"></div>
+        <div class="notes">Note: This is a simplified visual translation for design purposes.</div>
+      </div>
+
+      <div class="cartouche" style="text-align:center">
+        <div class="title">Text Preview</div>
+        <div id="plainText" class="plain">—</div>
+        <button id="copyBtn" class="secondary">Copy Hieroglyphs</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

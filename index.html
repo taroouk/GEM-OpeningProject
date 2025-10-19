@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grand Egyptian Museum Opening 2025</title>
+
+  <!-- ===== Bootstrap ===== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ===== Custom CSS ===== -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ===== Intro Animation Style ===== -->
+  <style>
+    #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 9999;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+
+    #intro h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    #intro span {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0;
+      animation: fadeIn 2s ease 1.2s forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .hide-intro {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .content {
+      display: none;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .show-content {
+      display: block;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== Intro Screen ===== -->
+  <div id="intro">
+    <h1>Grand Egyptian Museum</h1>
+    <span>Opening 2025</span>
+  </div>
+
+  <div class="content">
+    <!-- ===== Navbar ===== -->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top scrolled">
+        <div class="container">
+          <a class="navbar-brand fw-bold fs-3" href="#hero">GEM Opening</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Speakers">Speakers</a></li>
+              <li class="nav-item"><a class="nav-link" href="#experience">New</a></li>
+              <li class="nav-item"><a class="nav-link" href="#register">Registration</a></li>
+              <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== Hero Section ===== -->
+    <section id="hero" class="text-center align-items-center justify-content-center position-relative">
+      <div class="overlay"></div>
+
+      <div class="container position-relative fade-up" id="container">
+        <h1>Grand Egyptian Museum Opening 2025</h1>
+        <p class="lead">A monumental celebration of Egypt’s heritage and modern art.</p>
+        <p>📅 Nov 1 , 2025 — Giza, Egypt</p>
+
+        <a href="#register" class="btn btn-light btn-lg me-3 px-4 py-2">🎟 Get Tickets</a>
+        <a href="#schedule" class="btn btn-outline-light btn-lg px-4 py-2">🕐 View Schedule</a>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown-timer" id="countdown">
+        <div class="container text-center">
+          <div class="row justify-content-center">
+            <div class="col-3 unit">
+              <span class="number" id="days">00</span>
+              <span class="label">Days</span>
+            </div>
+            <div class="col-3 unit">
+              <span class="number" id="hours">00</span>
+              <span class="label">Hours</span>
+            </div>
+            <div class="col-3 unit">
+              <span class="number" id="minutes">00</span>
+              <span class="label">Minutes</span>
+            </div>
+            <div class="col-3 unit">
+              <span class="number" id="seconds">00</span>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Event Schedule ===== -->
+    <section class="event-section schedule" id="schedule">
+      <div class="overlay"></div>
+      <div class="container">
+        <h1>Event Schedule</h1>
+        <div class="schedule-grid">
+          <div class="schedule-item"><span class="time">5:00 PM</span><p>Guest arrivals & red carpet</p></div>
+          <div class="schedule-item"><span class="time">6:00 PM</span><p>Opening speeches</p></div>
+          <div class="schedule-item"><span class="time">6:45 PM</span><p>Grand reveal & light show</p></div>
+          <div class="schedule-item"><span class="time">7:15 PM</span><p>Museum tours & performances</p></div>
+          <div class="schedule-item"><span class="time">8:30 PM</span><p>Gala dinner</p></div>
+          <div class="schedule-item"><span class="time">10:00 PM</span><p>Closing show & networking</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Speakers Section ===== -->
+    <section class="section-two" id="Speakers"">
+      <div class="section-two-bg"></div>
+      <div class="content-wrapper">
+        <h2 class="section-title">Speakers Section</h2>
+        <div class="image-grid">
+          <div class="image-card">
+            <div class="img" style="background-image: url('41_2024-638523449096652804-665.jpg');"></div>
+            <h3 class="img-caption">Dr. Gihane Zaki<br>Director of GEM</h3>
+          </div>
+          <div class="image-card">
+            <div class="img" style="background-image: url('202407060244464446.jpg');"></div>
+            <h3 class="img-caption">Minister of Tourism<br>Opening Speech</h3>
+          </div>
+          <div class="image-card">
+            <div class="img" style="background-image: url('images.png');"></div>
+            <h3 class="img-caption">UNESCO Delegate<br>Cultural Partner</h3>
+          </div>
+          <div class="image-card">
+            <div class="img" style="background-image: url('Untitled.jpg');"></div>
+            <h3 class="img-caption">Guest Egyptologist<br>Heritage Talk</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Event Experiences ===== -->
+    <section class="event-experience-section" id="experience">
+  <div class="event-experience-container">
+    
+    <div class="event-image">
+      <div class="dual-images">
+        <div class="mixed-reality-image-wrapper">
+          <img src="WhatsApp Image 2025-10-08 at 19.27.11_1a775af8.jpg" alt="GEM Discovery Challenge" class="mixed-reality-ad-img">
+        </div>
+        <div class="mixed-reality-image-wrapper">
+          <img src="WhatsApp Image 2025-10-08 at 19.27.11_4658fa56.jpg" alt="Mixed Reality" class="mixed-reality-ad-img">
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="event-info">
+      <h1>Event Experiences</h1>
+      <h2>Explore the Discovery Challenge</h2>
+      <p><strong>Discovery Challenge:</strong> Immerse yourself in interactive challenges and uncover the hidden history of Egypt.</p>
+      <p><strong>Mixed & Virtual Reality:</strong> Step into the virtual realm and relive the stories of ancient civilizations like never before.</p>
+      <a href="#register" class="cta-button">Start the Challenge</a>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- ===== Translation Section ===== -->
+    <section id="translation" class="translation-section">
+      <div class="translation-container">
+        <div class="header">
+          <div class="logo">EG</div>
+          <div>
+            <h2>Hieroglyph Name Converter</h2>
+            <p class="lead">Type your name in English and see it displayed in beautiful Ancient Egyptian hieroglyphs.</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <input id="nameInput" type="text" placeholder="Enter your name (e.g. Nouran)">
+          <button id="convertBtn">Convert</button>
+          <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+
+        <div class="preview-wrap">
+          <div class="cartouche" id="display">
+            <div class="title">Hieroglyphic Result</div>
+            <div class="hieroglyphs" id="glyphContainer"></div>
+            <div class="cartouche-frame" id="cartoucheFrame" style="display:none"></div>
+            <div class="notes">Note: This is a simplified visual translation for design purposes.</div>
+          </div>
+
+          <div class="cartouche" style="text-align:center">
+            <div class="title">Text Preview</div>
+            <div id="plainText" class="plain">—</div>
+            <button id="copyBtn" class="secondary">Copy Hieroglyphs</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Register Section ===== -->
+    <section id="register" class="new-register-section">
+      <div class="register-container">
+        <div class="register-left">
+          <div class="museum-logo">
+            <img src="logo.png" alt="Grand Egyptian Museum Logo">
+          </div>
+        </div>
+
+        <div class="register-right">
+          <h2>Register to Attend</h2>
+          <form id="registrationForm">
+            <input type="text" placeholder="Full Name*" class="form-control" required>
+            <input type="email" placeholder="Email*" class="form-control" required>
+            <input type="tel" placeholder="Phone Number*" class="form-control" required>
+            <input type="password" placeholder="Password*" class="form-control" required>
+            <input type="password" placeholder="Confirm Password*" class="form-control" required>
+
+            <select class="form-select" required>
+              <option value="">Category</option>
+              <option value="Guest">Guest</option>
+              <option value="Press">Press</option>
+              <option value="VIP">VIP</option>
+            </select>
+
+           <div class="terms">
+  <input type="checkbox" id="agree">
+  <label for="agree">I agree to the Terms of Service and Privacy Policy</label>
+</div>
+
+
+            <button type="submit" class="btn btn-dark w-100 mt-3">Submit Registration</button>
+
+            <div class="text-center mt-3"><span>Or</span></div>
+
+            <button type="button" class="btn btn-light w-100 mt-2">
+              Sign up with Google
+            </button>
+
+            <div class="text-center mt-3">
+              <small>Already a member? <a href="#" style="color: var(--orange);">Login</a></small>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+<!-- ===== slides Section ===== -->
+<section class="wonders-section fade-in-section">
+  <h2 class="section-title">Journey Through Egypt’s Wonders</h2>
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="card"><img src="m1 (1).jpg" alt="Image 1"></div>
+      <div class="card"><img src="m1 (2).jpg" alt="Image 2"></div>
+      <div class="card"><img src="m1 (3).jpg" alt="Image 3"></div>
+      <div class="card"><img src="m1 (6).jpg" alt="Image 4"></div>
+      <div class="card"><img src="m1 (4).jpg" alt="Image 5"></div>
+      <div class="card"><img src="pic4.jpg" alt="Image 6"></div>
+      <div class="card"><img src="pic3.jpg" alt="Image 6"></div>
+      <div class="card"><img src="m1 (1).jpg" alt="Image 1"></div>
+      <div class="card"><img src="m1 (2).jpg" alt="Image 2"></div>
+      <div class="card"><img src="m1 (3).jpg" alt="Image 3"></div>
+      <div class="card"><img src="m1 (6).jpg" alt="Image 4"></div>
+      <div class="card"><img src="m1 (4).jpg" alt="Image 5"></div>
+      <div class="card"><img src="pic4.jpg" alt="Image 6"></div>
+      <div class="card"><img src="pic3.jpg" alt="Image 6"></div>
+    </div>
+  </div>
+</section>
+
+    <!-- ===== Location Section ===== -->
+    <section id="location" class="location-section py-5" style="background:#f8f9fc;">
+      <div class="container">
+        <h2 class="fw-bold text-center mb-5">Event Location</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h5>📍 Grand Egyptian Museum</h5>
+            <p class="text-muted">Cairo-Alexandria Desert Rd., Kafr Nassar, Al Haram, Giza Governorate, Egypt</p>
+            <ul style="list-style:none; padding:0;">
+              <li><strong>Date:</strong> Friday, March 7, 2025</li>
+              <li><strong>Time:</strong> 6:00 PM - 10:00 PM</li>
+              <li><strong>Venue:</strong> Main Halls, Grand Egyptian Museum</li>
+            </ul>
+            <a href="https://goo.gl/maps/2b5hx3Gqz9B2" target="_blank" class="btn btn-dark mt-3 px-4 py-2">📍 Get Directions</a>
+          </div>
+
+          <div class="col-md-6">
+            <div class="map-container" style="border-radius:10px; overflow:hidden; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.123292623701!2d31.21011881507978!3d29.979238932016534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840b4ccf924b1%3A0x9cdd1e93a8f8a1c6!2sGrand%20Egyptian%20Museum!5e0!3m2!1sen!2seg!4v1699999999999!5m2!1sen!2seg" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer py-3 text-center">
+      <div class="container">
+        <h5 class="fw-bold mb-0" style="color:#f6f4f4;">Grand Egyptian Museum</h5>
+        <ul class="footer-links list-inline mb-3">
+          <li class="list-inline-item"><a href="#hero">Home</a></li>
+          <li class="list-inline-item"><a href="#about">About</a></li>
+          <li class="list-inline-item"><a href="#schedule">Schedule</a></li>
+          <li class="list-inline-item"><a href="#registration">Register</a></li>
+          <li class="list-inline-item"><a href="#location">Location</a></li>
+        </ul>
+        <p class="mb-0" style="color:#f6f4f4;">&copy; 2025 Grand Egyptian Museum. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ===== JS Files ===== -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Intro Transition -->
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("intro").classList.add("hide-intro");
+        document.querySelector(".content").classList.add("show-content");
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
