@@ -94,15 +94,53 @@ document.addEventListener("DOMContentLoaded", () => {
   const interval = setInterval(updateCountdown, 1000);
 });
 
-/* ======================================================
-   5) Navbar Background on Scroll
-   ====================================================== */
-window.addEventListener("scroll", () => {
-  const nav = document.querySelector(".navbar");
-  if (!nav) return;
-  if (window.scrollY > 50) nav.classList.add("scrolled");
-  else nav.classList.remove("scrolled");
-});
+// // /* ======================================================
+//    5) Navbar Background on Scroll
+//    ======================================================
+
+  window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('mainNavbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+  });
+
+   
+   
+   
+   
+   
+   
+  
+// window.addEventListener("scroll", () => {
+//   const nav = document.querySelector(".navbar");
+//   if (!nav) return;
+//   if (window.scrollY > 50) nav.classList.add("scrolled");
+//   else nav.classList.remove("scrolled");
+// });
+
+      // Navbar active link on scroll
+      // const sections = document.querySelectorAll('section, header');
+      // window.addEventListener('scroll', () => {
+      //   let current = '';
+      //   sections.forEach(sec => {
+      //     const top = sec.offsetTop - 80;
+      //     if(window.scrollY >= top) current = sec.id || 'hero';
+      //   });
+      //   document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
+      //   const activeLink = document.querySelector('.nav-link[href="#' + current + '"]');
+      //   if(activeLink) activeLink.classList.add('active');
+      // });
+      // // smooth scroll for nav
+      // document.querySelectorAll('a.nav-link').forEach(a => {
+      //   a.addEventListener('click', function(e){
+      //     e.preventDefault();
+      //     const href = this.getAttribute('href');
+      //     document.querySelector(href).scrollIntoView({ behavior: 'smooth', block: 'start' });
+      //   });
+      // });
 
 /* ======================================================
    6) Hieroglyph Name Converter

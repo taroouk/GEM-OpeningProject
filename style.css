@@ -40,8 +40,72 @@ header {
   left: 0;
   z-index: 1000;
 }
+/* Navbar أساسي */
+#mainNavbar {
+  background-color: rgba(0, 0, 0, 0.382);
+  transition: all 0.4s ease;
+  padding: 1rem 1rem;
+}
 
-.navbar {
+/* Navbar عند التمرير */
+/* #mainNavbar.scrolled {
+  background-color: #111;
+  padding: 0.5rem 1rem;
+} */
+
+/* روابط Navbar */
+.nav-link {
+  position: relative;
+  color: #fff;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+/* خط التحويم */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: #D4AF37;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* أيقونة الهرم */
+.pyramid-icon {
+  height: 35px;
+  margin-right: 8px;
+  transition: transform 0.5s ease;
+}
+
+/* حركة بسيطة للهرم عند hover على الـ Brand */
+.navbar-brand:hover .pyramid-icon {
+  transform: rotate(20deg) scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .navbar-toggler {
+  border: none;
+  font-size: 1rem;
+  color: var(--white) !important;
+} */
+/* .navbar {
   height: 60px;
   padding: 0.1mm;
   transition: all 0.5s ease;
@@ -62,7 +126,7 @@ header {
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: var(--orange) !important;
-}
+} */
 
 /* ===== HERO SECTION ===== */
 #hero {
