@@ -11,6 +11,73 @@ window.addEventListener("load", () => {
   }, 3000);
 });
 
+// Pyramid 3D Logo
+// إعداد المشهد
+const container = document.getElementById('three-pyramid');
+const width = container.clientWidth;
+const height = container.clientHeight;
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(50, width / height, 0.1, 1000);
+camera.position.set(0, 0, 3);
+
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+renderer.setSize(width, height);
+renderer.setPixelRatio(window.devicePixelRatio);
+container.appendChild(renderer.domElement);
+
+// إضاءة المشهد
+const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.6);
+scene.add(hemiLight);
+const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+dirLight.position.set(5, 10, 7.5);
+scene.add(dirLight);
+
+// إنشاء الهرم
+const geometry = new THREE.TetrahedronGeometry(1, 0);
+const material = new THREE.MeshStandardMaterial({
+  color: 0xd4af37, // ذهبي
+  metalness: 0.3,
+  roughness: 0.5,
+  Highlight: 1,
+  side: THREE.DoubleSide
+});
+const pyramid = new THREE.Mesh(geometry, material);
+pyramid.rotation.x = -0.4;
+scene.add(pyramid);
+
+// إضاءة خفيفة خلفية
+const rimLight = new THREE.PointLight(0xffffff, 0.3, 10);
+rimLight.position.set(-2, 2, 3);
+scene.add(rimLight);
+
+// حركة تفاعلية
+let mouseX = 0, mouseY = 0;
+container.addEventListener('mousemove', (e) => {
+  const rect = container.getBoundingClientRect();
+  mouseX = (e.clientX - rect.left - rect.width/2) / rect.width;
+  mouseY = (e.clientY - rect.top - rect.height/2) / rect.height;
+});
+
+// تدوير تلقائي
+function animate(){
+  requestAnimationFrame(animate);
+  pyramid.rotation.y += 0.01 + mouseX * 0.05;
+  pyramid.rotation.x += 0.005 + mouseY * 0.02;
+  renderer.render(scene, camera);
+}
+animate();
+
+// جعل الحجم متجاوب
+window.addEventListener('resize', () => {
+  const w = container.clientWidth;
+  const h = container.clientHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+});
+
+
 /* ======================================================
    2) Initial Reveals Animation
    ====================================================== */
